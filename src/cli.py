@@ -1,10 +1,10 @@
 # Parse command line arguments
 import argparse
-from io_utils import load_jd_text, load_template
-from path_utils import prepare_output_dir
+from src.io_utils import load_jd_text, load_template
+from src.path_utils import prepare_output_dir
 
 def build_parser():
-    p = argparse.ArgumentParser(progdescription="resume-tailor", description="Automate LaTeX reume tailoring for a Job Description.")
+    p = argparse.ArgumentParser(prog="resume-tailor", description="Automate LaTeX reume tailoring for a Job Description.")
     p.add_argument("--jd-file", help="Path to JD .txt/.pdf/.docx")
     p.add_argument("--jd-text", help="Paste JD string directly (mutually exclusive)")
     p.add_argument("--role",    required=True, help="Role title")
