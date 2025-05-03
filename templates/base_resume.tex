@@ -1,0 +1,365 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Mayank Deshpande} \\ \vspace{1pt}
+    Santa Clara, CA, 95050 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 240-481-8418 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{msdeshp4@umd.edu}} ~ 
+    \href{https://mayankd.me/}{\raisebox{-0.2\height}\faLink\ \underline{Website}}  ~
+    \href{https://www.linkedin.com/in/msdeshpande04/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+    \href{https://github.com/MayankD409}{\raisebox{-0.2\height}\faGithub\ \underline{Github}} ~
+    \href{https://medium.com/@deshpandemayank5}{\raisebox{-0.2\height}\faMedium\ \underline{Medium}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Maryland, College Park}{Aug. 2023 -- Present}
+      {M.Eng. Robotics, GPA: 3.97/4}{College Park, MD}
+    \resumeSubheading
+      {Ramdeobaba College of Engineering and Management}{Aug. 2019 -- May 2023}
+      {B.E. Mechanical Engineering, GPA: 9/10}{Nagpur, IN}
+  \resumeSubHeadingListEnd
+
+% %------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{3}
+%             \begin{itemize}[itemsep=-5pt, parsep=7pt]
+%                 \item\small Software Development for Robotics
+%                 \item Robot Modeling
+%                 \item Processing of Pictorial Information
+%                 \item Control of Robotic System
+%                 \item Planning for Autonomous Robots
+%                 \item Perception for Autonomous Robots
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:}{ C++, C, Python, MATLAB} \\
+     \textbf{Development Platforms:} {Linux/RTOS environments, Embedded robotics, Gazebo, AirSim, CARLA, CarSim, MoveIt, SUMO} \\
+     \textbf{Libraries/Frameworks:} {ROS/ROS2, PyTorch, JAX, OpenCV, TensorFlow, Arduino, gtest, Qt, SolidWorks} \\
+     \textbf{Embedded \& Architecture:} {ARM platforms, RTOS, C++\/Firmware Dev, Buses (UART, SPI, I2C, CAN), BLE, Network Protocols (MQTT?)} \\
+     \textbf{Tools:} {Kubernetes, Docker, Git, Confluence, bash, nprof, Vtune, GitHub Actions, GPU Programming} \\
+    }}
+ \end{itemize}
+ \vspace{-13pt}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {Intuitive Surgical Inc.}{May 2024 -- Dec 2024}
+      {System Software Engineer Co-op}{Sunnyvale, CA}
+      \resumeItemListStart
+      \justifying
+        \resumeItem{Developed an end-to-end testing pipeline in Python for the Ion Endoluminal robot, integrating real-time data logging and time-series analysis to proactively detect equipment failures. Achieved 85\% automation and reduced single-use test time by 20\%.}
+        \resumeItem{Developed an optical-flow–based verification method to compare user commands with real-time video from catheter, addressing low-texture lung simulations by training a custom RAFT model and improving flow accuracy by 35\% over classical approaches.}
+        % \resumeItem{Automated the Ion Endoluminal robot testing pipeline with 95\% automation and 20\% reduced test time using MATLAB; applied time series analysis and machine learning for equipment failure prediction. Developed a computer vision solution to correct vision probe video feed orientation, using pattern recognition.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {GAMMA AI Lab, UMD}{Jan 2024 -- May 2024}
+      {Research Assistant}{College Park, MD}
+      \resumeItemListStart
+        \justifying
+        \resumeItem{Developed a GCN based model for pedestrian trajectory prediction that inputted the robot’s planned path as future, achieving a 12\% improvement in real-time performance and maintaining sub-2ms inference time, leveling state-of-the-art ADE/FDE benchmarks.}
+        \resumeItem{Validated the model on a Husky robot navigating crowded environments, confirming simulation outcomes through successful real-life experiments and demonstrating robust, low-latency trajectory forecasting.}
+        % \resumeItem{Developed a deep learning model using Graph Convolutional Networks and bidirectional-GRU for pedestrian path prediction, improving robot navigation with state of the art ADE/FDE metrics and sub-2ms inference time, validated on a Husky robot.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {CodelatticeLabs Pvt. Ltd.}{May 2022 -- July 2023}
+      {Robotics Software Engineer}{Bengaluru, IN}
+      \resumeItemListStart
+      \justifying
+        \resumeItem{Developed, tested, and debugged C++ firmware for ESP32 microcontrollers, implementing communication protocols (UART, MQTT) for reliable real-time data transfer from embedded sensors.} % Added tested, debugged, reliability, protocols
+        \resumeItem{Simulated and implemented multi-agent coordination algorithms and trajectory tracking methods for constrained robots, leveraging reinforcement learning for intelligent intersection management.}
+        % \resumeItem{Enhanced delivery robot navigation with submap fusion and developed C++ firmware for IoT weight data transmission (Esp32 Node-MCU). Simulated and implemented multi-agent coordination and trajectory tracking using reinforcement learning for intelligent intersection management.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+% \vspace{-13pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\href{https://github.com/MayankD409/RL_MPC.git}{\textbf{Adaptive RL-MPC for Autonomous Lane-Changing}} $|$ \emph{Python, SUMO, RL, MPC}}{November 2024}
+          \resumeItemListStart
+            \justifying
+            \resumeItem{Engineered a real-time RL-MPC pipeline for autonomous lane-changing, integrating SAC/PPO/TD3 with model predictive control to dynamically adjust risk weights. Achieved 30\% higher success rates, 25\% lower collision rates, and 20\% faster lane changes in SUMO simulations, while optimizing concurrency for stable performance under varying traffic conditions.}
+            % \resumeItem{Developed a hybrid RL-MPC framework for autonomous vehicle lane-changing, integrating SAC/PPO/TD3 for dynamic, risk-aware weight adjustment.}
+            % \resumeItem{Designed and trained an RL agent using a curriculum-based protocol, achieving improved performance in varying traffic scenarios in the SUMO simulation environment.}
+            % \resumeItem{Achieved 30\% higher success rates, 25\% lower collision rates, and 20\% faster lane-change completion compared to traditional MPC systems.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \resumeProjectHeading
+        {\href{https://github.com/MayankD409/HumanDetectionandTracking.git}{\textbf{Human detection and Tracking}} $|$ \emph{C++, OpenCV, MiDAS Resnet, GoogleTest, CMake}}{October 2023}
+          \resumeItemListStart
+            \resumeItem{Developed an C++ module for detecting and tracking human obstacles using Monocular Camera with ResNet \& OpenCV integration within the robot's reference frame.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \resumeProjectHeading
+          {\href{https://github.com/MayankD409/VisualOdom-Particle-Filter.git}{\textbf{Visual-Encoding-Particle-Filter}} $|$ \emph{C++, Python, ROS2, DL}}{May 2024}
+          \resumeItemListStart
+            \justifying
+            % \resumeItem{Developed a vision-based localization and visual odometry method for drones using a particle filter approach with image encoding measurements.}
+            % \resumeItem{Implemented and experimented with three image encoders (CNN-based, VecKM-based, Histogram of Features) to generate inputs for the particle filter's measurement model, achieving fast convergence to the drone's ground-truth location.}
+            % \resumeItem{Integrated the system with ROS for real-time localization and tested in a realistic Gazebo PX4 SITL environment, validating performance through both visual results and odometry readings.}
+            \resumeItem{Developed a vision-based localization and visual odometry method for drones using a particle filter with CNN, VecKM, and Histogram of Features encoders, achieving fast convergence and real-time localization in ROS, validated in a Gazebo PX4 SITL environment.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \resumeProjectHeading
+          {\href{https://github.com/MayankD409/Structure-From-Motion.git}{\textbf{3D Reconstruction using Structure from Motion}} $|$ \emph{C++, openCV, eigen}}{March 2024}
+          \resumeItemListStart
+            \justifying
+            % \resumeItem{Developed a Structure from Motion (SfM) system to reconstruct 3D structures from 2D image sequences using feature detection (SIFT), matching, and bundle adjustment techniques.}
+            % \resumeItem{Implemented camera pose estimation and 3D point cloud generation, achieving accurate 3D reconstructions validated through synthetic and real-world datasets.}
+            \resumeItem{Developed a Structure from Motion (SfM) system using SIFT, matching, and bundle adjustment for 3D reconstruction, achieving accurate results validated with synthetic and real-world datasets.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \resumeProjectHeading
+          {\href{https://github.com/MayankD409/RIEKF_Python.git}{\textbf{Right Invariant Extended Kalman Filter for object based SLAM}} $|$ \emph{Python}}{September 2023}
+          \resumeItemListStart
+            \justifying
+            \resumeItem{Translated the theoretical RIEKF algorithm for object-based SLAM into Python, showcasing in-depth knowledge of RIEKF principles and their advantages over standard EKF in a detailed report on Yang Song et al.'s 2022 paper.}
+            % \resumeItem{Successfully translated the theoretical RIEKF (Right Invariant Extended Kalman Filter) algorithm for object based SLAM into a functional Python implementation,}
+            % \resumeItem{Demonstrated in-depth knowledge of RIEKF principles and its benefits over standard EKF for object features in SLAM through a detailed report on the 2022 paper by Yang Song et al.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \resumeProjectHeading
+          {\href{https://github.com/MayankD409/Two_Pendulum_Crane.git}{\textbf{LQR and LQG controller for two pendulum crane}} $|$ \emph{MATLAB, C++}}{October 2023}
+          \resumeItemListStart
+          \justifying
+            \resumeItem{Modeled and controlled a two-pendulum crane system using LQR and LQG techniques in MATLAB}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%% Unused Projects %%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        %   {\href{https://github.com/MayankD409/Humanoid-Imitation-RL.git}{\textbf{Humanoid Robot Imitation Learning from Human Videos}} $|$ \emph{Python, PyBullet, PPO, GAIL, OpenPose}}{March 2025}
+        %   \resumeItemListStart
+        %     \justifying
+        %     \resumeItem{Developed a simulated humanoid robot that learns to accurately replicate human walking motions by combining OpenPose-based pose extraction from videos with PPO and GAIL reinforcement learning techniques, achieving stable and realistic gait patterns in PyBullet simulations.}
+        %     % \resumeItem{Developed a simulated humanoid robot that autonomously learns to replicate human walking actions by processing video inputs using OpenPose for accurate pose estimation and joint-angle trajectory extraction.}
+        %     % \resumeItem{Implemented a reinforcement learning pipeline integrating Generative Adversarial Imitation Learning (GAIL) and Proximal Policy Optimization (PPO), resulting in stable, human-like gait patterns within PyBullet simulations.}
+        %     % \resumeItem{Validated imitation accuracy against human video demonstrations, achieving robust real-time humanoid locomotion and efficient convergence in training.}
+        %   \resumeItemListEnd
+        %   \vspace{-13pt}
+          
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        %   {\href{https://github.com/MayankD409/AutoPano.git}{\textbf{AutoPano}} $|$ \emph{Python, openCV, git}}{April 2024}
+        %   \resumeItemListStart
+        %     % \resumeItem{Developed an automatic panorama stitching solution using traditional techniques (Harris Corner Detection, ANMS, feature matching, RANSAC) and deep learning models (HomographyNet) for homography estimation.}
+        %     % \resumeItem{Achieved high-quality panoramic stitching with supervised and unsupervised learning, validated through synthetic data and real-world image sets.}
+        %     \resumeItem{Developed an automatic panorama stitching solution using traditional techniques and deep learning models (HomographyNet), achieving high-quality results with supervised and unsupervised learning, validated on synthetic and real-world image sets.}
+        %   \resumeItemListEnd 
+        %   \vspace{-13pt}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        %  {\textbf{Python Test Automation Framework for Embedded Device Comms} $|$ \emph{Python, pytest, UART/BLE Simulation}}{May 2024} % Adjust Date & Tech
+        %  \resumeItemListStart
+        %   \justifying
+        %   \resumeItem{Developed a modular test automation framework in Python using pytest to verify communication protocols (simulated UART, BLE) for an embedded device target; implemented mock interfaces, automated test execution via CI/CD, and generated detailed reports, significantly improving test reliability and coverage.}
+        %  \resumeItemListEnd
+        %  \vspace{-13pt}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        % {\href{https://github.com/MayankD409/AutoCalib.git}{\textbf{AutoCalib}} $|$ \emph{Python, OpenCV, NumPy, Matplotlib, CMake}}{Feb 2024}
+        %   \resumeItemListStart
+        %     % \resumeItem{A Python implementation of Zhang's camera calibration method, automating checkerboard detection and accurately estimating camera parameters using OpenCV and NumPy.}
+        %   \resumeItemListEnd 
+        %   \vspace{-13pt}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        % {\href{https://github.com/MayankD409/Stereo-Vision.git}{\textbf{Stereo-Vision}} $|$ \emph{Python, OpenCV, NumPy, Matplotlib}}{Feb 2024}
+        %   \resumeItemListStart
+        %     % \resumeItem{A Python implementation of Zhang's camera calibration method, automating checkerboard detection and accurately estimating camera parameters using OpenCV and NumPy.}
+        %   \resumeItemListEnd 
+        %   \vspace{-13pt}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        % {\href{https://github.com/MayankD409/Optimal_Path_Planning.git}{\textbf{Path Planning Algorithms for Point Robot}} $|$ \emph{Python, OpenCV, Numpy, Pygame}}{Feb 2024}
+        %   \resumeItemListStart
+        %     % \resumeItem{A Python implementation of Dijkstra, Bi-RRT, and Bi-RRT* path planning algorithms for a point robot, featuring real-time visualization with Pygame and video generation using OpenCV.}
+        %   \resumeItemListEnd 
+        %   \vspace{-13pt}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeSubHeadingListStart
+        % \resumeProjectHeading
+        %  {\textbf{LLM Fine-Tuning for Question Answering} $|$ \emph{PyTorch, LLM Fine-Tuning, PEFT, LoRA}}{Jan 2025} % Adjust date as needed
+        %  \resumeItemListStart
+        %    \justifying
+        %    \resumeItem{Fine-tuned a Large Language Model using Supervised Fine-Tuning and Parameter-Efficient Fine-Tuning (PEFT/LoRA) in PyTorch to significantly improve performance on domain-specific Question Answering (Financial QA).}
+        %  \resumeItemListEnd
+        %  \vspace{-13pt}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeProjectHeading
+        %   {\textbf{Multi-Sensor Fusion for Robust 3D Perception} $|$ \emph{Python, C++, PyTorch, Deep Learning, Sensor Fusion}}{October 2024} % Adjust date
+        %   \resumeItemListStart
+        %     \justifying
+        %     \resumeItem{Designed and implemented a Transformer-based deep fusion framework (PyTorch/C++) for robust 3D object detection, processing LiDAR point clouds (Open3D) and camera images to improve perception accuracy and robustness, validated in simulated adverse weather (CARLA).}
+        %   \resumeItemListEnd
+        %   \vspace{-13pt}
+
+        
+        
+        
+    \resumeSubHeadingListEnd
+\vspace{1pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Publications}
+        {\href{https://ieeexplore.ieee.org/document/9989028}{\textbf{Behavioral Analysis of ROS motion planners integrated with Robotics Middleware Framework (RMF)} $|$ Published: 2022 $|$ \href{https://ieeexplore.ieee.org/document/9989028}{IEEE}}\\
+        \textup{This paper evaluates the integration of the Robotics Middleware Framework (RMF) with Free Fleet, analyzing the performance of different path planning algorithms in multi-robot scenarios to enhance autonomous mobile robot fleet management.}
+
+
+\end{document}
