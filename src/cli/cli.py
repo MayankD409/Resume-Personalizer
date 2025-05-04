@@ -2,16 +2,11 @@
 import argparse
 from rich import print
 from rich.console import Console
-from src.io_utils import load_jd_text, load_template
-from src.path_utils import prepare_output_dir
-from src.latex_parser import extract_project_blocks, toggle_block
-from src.prompt_builder import build_messages_pass1, build_messages_pass2
-from src.project_chooser import decide_projects
-from src.rewrite_applier import apply_bullet_rewrites, replace_skills_block
-from src.response_validator import validate_response, format_validation_error
-from src.keyword_analyzer import analyze_keyword_match, get_keyword_recommendations, format_keyword_report
-from src.interactive_mode import interactive_modifications
-from src.ai_client import AIClient
+from src.core import load_jd_text, load_template, prepare_output_dir, decide_projects, AIClient
+from src.latex import extract_project_blocks, toggle_block, apply_bullet_rewrites, replace_skills_block
+from src.ai import build_messages_pass1, build_messages_pass2, validate_response, format_validation_error
+from src.ai import analyze_keyword_match, get_keyword_recommendations, format_keyword_report
+from src.ui import interactive_modifications, show_diff_lines, preview_changes
 import pathlib
 import logging
 import sys
@@ -162,7 +157,6 @@ def run_tailor_workflow(args):
         )
     elif args.mode == "preview":
         # Preview mode - just show changes without saving
-        from src.interactive_mode import show_diff_lines, preview_changes
         console.print("\n[bold]Changes Preview:[/bold]")
         show_diff_lines(lines, modified_lines)
         preview_changes(lines, bullets)

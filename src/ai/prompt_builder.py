@@ -1,11 +1,11 @@
 # ──────────────────────────────────────────────────────────────
-# src/prompt_builder.py
+# src/ai/prompt_builder.py
 # Build chat messages for the TWO‑PASS LLM pipeline.
 # ──────────────────────────────────────────────────────────────
 from __future__ import annotations
 import re
 from typing import List, Dict, Optional
-from src.prompt_improver import enhance_project_selection_prompt, enhance_bullet_rewrite_prompt, create_examples_for_bullets
+from src.ai.prompt_improver import enhance_project_selection_prompt, enhance_bullet_rewrite_prompt, create_examples_for_bullets
 
 # ---------- rough token counter ------------------------------------------ #
 def approx_tokens(text: str) -> int:

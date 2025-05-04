@@ -4,7 +4,7 @@ context awareness and improve the quality of AI-generated resume tailoring.
 """
 from typing import Dict, List, Optional, Any
 import re
-from src.keyword_analyzer import extract_keywords
+from src.ai.keyword_analyzer import extract_keywords
 
 def enhance_project_selection_prompt(
     role: str, 
