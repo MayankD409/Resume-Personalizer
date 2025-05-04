@@ -10,12 +10,18 @@ def _read_docx(path: pathlib.Path) -> str:
     """Read a DOCX file and return its text content."""
     return "\n".join(p.text for p in docx.Document(path).paragraphs)
 
-def load_jd_text(args):
+def load_jd_text(path_or_args):
     """Load the job description text from a file or directly from the command line."""
-    if args.jd_text:
-        return args.jd_text.strip()
+    # Check if we're dealing with an args object or a direct path
+    if hasattr(path_or_args, 'jd_text') and path_or_args.jd_text:
+        return path_or_args.jd_text.strip()
     
-    path = pathlib.Path(args.jd_file).expanduser()
+    # Either a path string or args.jd_file
+    file_path = path_or_args
+    if hasattr(path_or_args, 'jd_file'):
+        file_path = path_or_args.jd_file
+    
+    path = pathlib.Path(file_path).expanduser()
     if not path.exists():
         print(f"[red]Error: File {path} does not exist.[/red]")
         return None
@@ -24,7 +30,7 @@ def load_jd_text(args):
     if ext == ".pdf": txt = _read_pdf(path)
     elif ext == ".docx": txt = _read_docx(path)
     else:
-        txt = path.read_text(encodind="utf-8")
+        txt = path.read_text(encoding="utf-8")
     print(f"[cyan]Loaded JD ({len(txt.split())} words) from {path}[/]")
     return txt
 
