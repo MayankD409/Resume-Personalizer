@@ -81,3 +81,8 @@ node_modules/
 # Temporary files
 tmp/
 temp/
+
+test_prompt_improver.py
+test_resume.tex
+debug_messages.py
+output.json

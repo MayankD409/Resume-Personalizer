@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-console = Console()
+console = Console() # console is used for colored output
 
 def build_parser():
     p = argparse.ArgumentParser(prog="resume-tailor", description="Automate LaTeX resume tailoring for a Job Description.")
@@ -30,11 +30,13 @@ def build_parser():
     p.add_argument("--jd-text", help="Paste JD string directly (mutually exclusive)")
     p.add_argument("--role", help="Job role being applied for", required=True)
     p.add_argument("--company", help="Company name", required=True)
-    p.add_argument("--template", help="Path to template .tex file", default="templates/resume_template.tex")
+    p.add_argument("--template", help="Path to template .tex file", default="templates/base_resume.tex")
     p.add_argument("--mode", help="Output mode ('interactive', 'auto', 'preview')", default="interactive")
     p.add_argument("--output", help="Output path for the tailored resume", default="output")
-    p.add_argument("--debug", help="Enable debug logging", action="store_true")
-    p.add_argument("--model", help="AI model to use", default="gpt-4o")
+    # Define a flag argument to enable debug logging.
+    # action="store_true": If "--debug" is present, set args.debug to True, otherwise False.
+    p.add_argument("--debug", help="Enable debug logging", action="store_true") 
+    p.add_argument("--model", help="AI model to use", default="gpt-4.1")
     p.add_argument("--keyword-analysis", help="Enable keyword matching analysis", action="store_true")
     p.add_argument("--no-color", help="Disable colored output", action="store_true")
     return p
@@ -83,7 +85,7 @@ def run_tailor_workflow(args):
     messages1 = build_messages_pass1(jd_text, args.role, args.company, resume_text, blocks)
     response1 = ai.ask(messages1)
     
-    # Validate the response
+    # Validate if the response is in the expected format (The json schema)
     validated_response1 = validate_response(response1, "project_selection")
     if not validated_response1:
         console.print(f"[bold red]Error:[/bold red] Invalid response from AI model")

@@ -2,7 +2,7 @@
 # src/ai/prompt_builder.py
 # Build chat messages for the TWO‑PASS LLM pipeline.
 # ──────────────────────────────────────────────────────────────
-from __future__ import annotations
+from __future__ import annotations # we need this for the type hinting in the function signatures meaning that the function can return a type that is not yet defined.
 import re
 from typing import List, Dict, Optional
 from src.ai.prompt_improver import enhance_project_selection_prompt, enhance_bullet_rewrite_prompt, create_examples_for_bullets
@@ -39,13 +39,13 @@ def build_messages_pass1(
         jd_text: str,
         role: str,
         company: str,
-        resume_tex: list[str] or str,
-        projects: Optional[List[Dict]] = None
+        resume_tex: list[str] or str, # resume_tex is a list of lines or a string
+        projects: Optional[List[Dict]] = None # list of project dicts containing title and keywords
 ) -> List[Dict[str, str]]:
     """Prompt for the first pass (project selection)."""
     # Convert resume_tex to string if it's a list
     if isinstance(resume_tex, list):
-        resume_tex = "\n".join(resume_tex)
+        resume_tex = "\n".join(resume_tex) # join lines into a single string with newlines as separators
     
     res_to_send = _budgeted_resume(resume_tex, jd_text, role, company)
     

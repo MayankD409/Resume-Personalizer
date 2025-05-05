@@ -4,7 +4,12 @@ context awareness and improve the quality of AI-generated resume tailoring.
 """
 from typing import Dict, List, Optional, Any
 import re
+import json
+import logging
 from src.ai.keyword_analyzer import extract_keywords
+
+# Configure logger
+logger = logging.getLogger(__name__)
 
 def enhance_project_selection_prompt(
     role: str, 
@@ -30,13 +35,18 @@ def enhance_project_selection_prompt(
     # Extract project types and tech stacks
     project_summaries = []
     for i, project in enumerate(projects):
-        # Get project title
-        title_match = re.search(r'\\textbf\{(.*?)\}', project.get('content', ''))
-        title = title_match.group(1) if title_match else f"Project {i+1}"
+        # DEBUG: Print project structure
+        logger.info(f"DEBUG - Project {i} structure: {json.dumps(project, indent=2)}")
         
-        # Extract tech stack and key skills from project
-        project_content = project.get('content', '')
-        keywords = extract_keywords(project_content, top_n=8)
+        # Get project title directly from the project dictionary
+        title = project.get('title', f"Project {i+1}")
+        
+        # DEBUG: Print extracted title
+        logger.info(f"DEBUG - Extracted title: {title}")
+        
+        # Extract keywords from project content (bullet points)
+        project_content = " ".join(project.get('content', []))
+        keywords = extract_keywords(project_content, top_n=10) if project_content else []
         
         project_summaries.append({
             "title": title,
