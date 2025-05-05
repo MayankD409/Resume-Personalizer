@@ -226,13 +226,13 @@ def interactive_modifications(
         final_lines = original_lines.copy()
         
         # Apply selected bullet changes
-        from src.rewrite_applier import apply_bullet_rewrites
+        from src.latex.rewrite_applier import apply_bullet_rewrites
         if selected_bullets:
             apply_bullet_rewrites(final_lines, selected_bullets)
         
         # Apply skills block if selected
         if apply_skills and skills_block:
-            from src.rewrite_applier import replace_skills_block
+            from src.latex.rewrite_applier import replace_skills_block
             replace_skills_block(final_lines, skills_block)
             
         return final_lines
